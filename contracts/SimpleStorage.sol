@@ -1,13 +1,33 @@
+// I'm a comment!
 // SPDX-License-Identifier: MIT
-// This can also be writte in range
-// pragma solidity >=0.8.26 <9.0.0; // more than first less than second
-pragma solidity ^0.8; // always start with solidty version number on top
+
+pragma solidity ^0.8.26;
+// pragma solidity ^0.8.0;
+// pragma solidity >=0.8.0 <0.9.0;
 
 contract SimpleStorage {
-    // basic types
-    // int, uint, address, boolean, bytes, string
-    uint32 public favoriteNumber;
-    function store(uint32 _favoriteNumber) public {
+
+    uint256 favoriteNumber;
+
+    struct People {
+        uint256 favoriteNumber;
+        string name;
+    }
+    // uint256[] public anArray;
+    People[] public people;
+
+    mapping(string => uint256) public nameToFavoriteNumber;
+
+    function store(uint256 _favoriteNumber) public {
         favoriteNumber = _favoriteNumber;
+    }
+    
+    function retrieve() public view returns (uint256){
+        return favoriteNumber;
+    }
+
+    function addPerson(string memory _name, uint256 _favoriteNumber) public {
+        people.push(People(_favoriteNumber, _name));
+        nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 }

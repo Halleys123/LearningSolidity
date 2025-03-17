@@ -6,21 +6,14 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "favoriteNumber",
-				"outputs": [
+				"inputs": [
 					{
-						"internalType": "uint32",
+						"internalType": "string",
 						"name": "",
-						"type": "uint32"
+						"type": "string"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "get",
+				"name": "ntn",
 				"outputs": [
 					{
 						"internalType": "uint32",
@@ -34,9 +27,38 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "people",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
 						"internalType": "uint32",
-						"name": "_favoriteNumber",
+						"name": "age",
 						"type": "uint32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint32",
+						"name": "_age",
+						"type": "uint32"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
 					}
 				],
 				"name": "store",
@@ -73,11 +95,11 @@
 	},
 	"sources": {
 		"contracts/SimpleStorage.sol": {
-			"keccak256": "0xc3bff972fed34319f2428260b91552d2aec930e43e427678cb7365efa2bcbed9",
+			"keccak256": "0xc6ad0270d1125df7923399c113feb1f8f0d26e7d550fa6df89e5d0115f9d3726",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://08ae07939a35130ca1b68da408c898e673c98fc9eb2a706119b9415fb2d05e9f",
-				"dweb:/ipfs/Qmab8zbPkZkSyozW9qvpaz2B2FXXByZwVe1nAdtWwE5SEh"
+				"bzz-raw://086b0360bca891612a39c79bf2f4984d3e0ac165a50849244a5fbdf343bc9674",
+				"dweb:/ipfs/QmVhNwE6rhw4RcKAAZVq7CbveRUajPjPah3oq4ctLKGMWs"
 			]
 		}
 	},
